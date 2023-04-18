@@ -75,6 +75,6 @@ read_fwf(x,
 prcp_data <- read_tsv("data/composite_dly.tsv")
 
 
-chart<-ggplot(prcp_data, aes(x=date, y=value)) + geom_point()
+chart<-ggplot(prcp_data, aes(x=date, y=value)) + geom_line()
 
 ggsave("visuals/world_drought.png", width = 8, height = 4)
