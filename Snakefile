@@ -1,6 +1,7 @@
 rule targets:
     input:
         "data/USW00013897.dly",
+        "data/composite_dly.tsv"
 
 rule get_all_archive:
     input:
