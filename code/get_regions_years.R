@@ -31,7 +31,7 @@ library(ggplot2)
 #------------------------------
 
 # BNA airport - "data/USW00013897.dly"
-
+# Read in and format weather data
 
 window <- 30
 tday_julian <- yday(today())
