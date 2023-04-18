@@ -1,5 +1,6 @@
 rule targets:
     input:
+<<<<<<< Updated upstream
         "data/ghcnd_all.tar.gz",
         "data/ghcnd_all_files.txt",
         "data/ghcnd-inventory.txt",
@@ -9,6 +10,11 @@ rule targets:
         "visuals/world_drought.png",
         "index.html"
 
+=======
+        "data/USW00013897.dly",
+        "data/composite_dly.tsv",
+        "index.html"
+>>>>>>> Stashed changes
 
 rule get_all_archive:
     input:
