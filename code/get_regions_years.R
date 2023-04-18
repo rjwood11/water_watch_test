@@ -3,6 +3,7 @@
 library(tidyverse)
 library(glue)
 library(lubridate)
+library(ggplot2)
 
 # https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
 #------------------------------
@@ -70,3 +71,10 @@ read_fwf(x,
          year = year(date)) %>%
   filter(is_in_window) %>%
   write_tsv("data/composite_dly.tsv")
+
+prcp_data <- read_tsv("data/composite_dly.tsv")
+
+
+chart<-ggplot(prcp_data, aes(x=date, y=value)) + geom_point()
+
+ggsave("visuals/world_drought.png", width = 8, height = 4)

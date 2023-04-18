@@ -22,13 +22,15 @@ rule get_regions_years:
         r_script = "code/get_regions_years.R",
         data = "data/USW00013897.dly"
     output:
-        "data/composite_dly.tsv"
+        "data/composite_dly.tsv",
+        "visuals/world_drought.png"
     conda:
         "environment.yml"
     shell:
         """
         {input.r_script}
         """
+
 rule render_index:
     input:
         rmd = "index.Rmd",
