@@ -3,7 +3,7 @@
 library(tidyverse)
 library(glue)
 library(lubridate)
-library(ggplot2)
+
 
 # https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
 #------------------------------
