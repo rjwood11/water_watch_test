@@ -38,5 +38,4 @@ jobs:
           git add visuals/world_drought.png index.html
           git commit -m --allow-empty
           git commit -m "New day's rendering"
-          git push origin main
       - run: echo "🍏 This job's status is ${{ job.status }}."
