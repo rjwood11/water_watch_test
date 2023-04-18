@@ -16,6 +16,29 @@ rule get_all_archive:
         {input.script} {params.file}
         """
 
-
+rule get_regions_years:
+    input:
+        r_script = "code/get_regions_years.R",
+        data = "data/USW00013897.dly"
+    output:
+        "data/composite_dly.tsv"
+    conda:
+        "environment.yml"
+    shell:
+        """
+        {input.r_script}
+        """
+rule render_index:
+    input:
+        rmd = "index.Rmd",
+        png = "visuals/world_drought.png"
+    output:
+        "index.html"
+    conda:
+        "environment.yml"
+    shell:
+        """
+        R -e "library(rmarkdown); render('{input.rmd}')"
+        """
 
         
