@@ -36,6 +36,6 @@ jobs:
       - name: Commit changes to repository
         run: |
           git add visuals/world_drought.png index.html
-          git commit -m --allow-empty
           git commit -m "New day's rendering"
+          git push
       - run: echo "🍏 This job's status is ${{ job.status }}."
