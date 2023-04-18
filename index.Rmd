@@ -1,6 +1,6 @@
 ---
 title: Drought index for world
-author: Pat Schloss
+author: Ryan Jackwood
 output: html_document
 email_address: pat@riffomonas.org
 github_repo: https://github.com/riffomonas/drought_index
