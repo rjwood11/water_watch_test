@@ -3,7 +3,7 @@
 library(tidyverse)
 library(glue)
 library(lubridate)
-
+library(dataRetrieval)
 
 # https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
 #------------------------------
@@ -74,7 +74,31 @@ read_fwf(x,
 
 prcp_data <- read_tsv("data/composite_dly.tsv")
 
+############################################################
 
-chart<-ggplot(prcp_data, aes(x=date, y=value)) + geom_line()
+sites_millcreek = c("03431060", "03430550", "03431083","03431000")
+sites_harpeth = c("0343233905", "03432400", "034324146","03432800", "03434500", "03433500")
+sites_richland = c("03431700", "03431655")
+parameter_codes = c("00060", "00300")
+
+
+sites = readNWISsite(siteNumbers=c(sites_millcreek, sites_harpeth, sites_richland))
+site_coords = sites[c(2:3,5:6,7,10:12),]
+data.table::setnames(site_coords, old = c("dec_lat_va"),
+                     new = c("Latitude"))
+data.table::setnames(site_coords, old = c("dec_long_va"),
+                     new = c("Longitude"))
+
+# Just 0343233905 to demonstrate concept
+
+today_data = readNWISdata(sites=c('0343233905','03431000','03431060','03431655','03431700','03432800','03433500','03434500'), service="iv",asDateTime=T)
+
+#today_data = readNWISdata(sites=c('0343233905'),
+
+
+
+############################################################
+
+chart<-ggplot(prcp_data, aes(x=date, y=value)) + geom_line(col="blue")
 
 ggsave("visuals/world_drought.png", width = 8, height = 4)
