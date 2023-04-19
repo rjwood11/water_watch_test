@@ -14,5 +14,6 @@ dependencies:
   - snakemake=7.14.0
   - graphviz=5.0.1
   - coreutils>=9.1
-  - r-dataretrieval
+  - usgs=0.2.1
+ 
 
