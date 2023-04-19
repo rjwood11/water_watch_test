@@ -3,7 +3,7 @@
 library(tidyverse)
 library(glue)
 library(lubridate)
-library(dataRetrieval)
+
 
 # https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
 #------------------------------
