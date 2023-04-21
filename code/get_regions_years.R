@@ -77,9 +77,6 @@ prcp_data <- read_tsv("data/composite_dly.tsv")
 
 ############################################################
 
-data <- xmlParse("data/index.html@site=03433500")
-
-xml_data <- xmlToList(data)
 
 
 ############################################################
