@@ -16,7 +16,6 @@ github_repo: https://rjwood11.github.io/drought_index
 ```{r echo = FALSE, message = FALSE}
 library(lubridate)
 library(tidyverse)
-library(xml)
 ```
 
 ```{css echo = FALSE}
