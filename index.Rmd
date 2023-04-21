@@ -1,7 +1,9 @@
 ---
-title: Drought index for world
-author: Ryan Jackwood
-output: html_document
+title: "Water Watch Test"
+author: "Ryan Jackwood"
+output:
+  html_document: default
+  pdf_document: default
 email_address: ryanjackwood@harpethriver.org
 github_repo: https://rjwood11.github.io/drought_index
 ---
@@ -13,6 +15,8 @@ github_repo: https://rjwood11.github.io/drought_index
 
 ```{r echo = FALSE, message = FALSE}
 library(lubridate)
+library(tidyverse)
+library(xml)
 ```
 
 ```{css echo = FALSE}
@@ -32,10 +36,18 @@ body {
 }
 ```
 
-![](visuals/world_drought.png)
-
+![](visuals/map.html)
+![Cartoon Diagram](visuals/workflow_cartoon.png)
 
 Last updated on `r today()`  
 Site [developed](`r rmarkdown::metadata$github_repo`) by [Ryan Jackwood](mailto:`r rmarkdown::metadata$email_address`)
+
+```{r echo = FALSE, message = FALSE}
+
+
+
+
+```
+
 
 <p style="color: black">`r now()`</p>

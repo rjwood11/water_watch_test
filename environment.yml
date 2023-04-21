@@ -15,6 +15,7 @@ dependencies:
   - graphviz=5.0.1
   - coreutils>=9.1
   - dataretrieval=1.0.3
+  - r-xml=3.99_0.14
 
  
 

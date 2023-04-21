@@ -3,6 +3,7 @@
 library(tidyverse)
 library(glue)
 library(lubridate)
+library(XML)
 
 
 # https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt
@@ -75,6 +76,10 @@ read_fwf(x,
 prcp_data <- read_tsv("data/composite_dly.tsv")
 
 ############################################################
+
+data <- xmlParse("data/index.html@site=03433500")
+
+xml_data <- xmlToList(data)
 
 
 ############################################################
