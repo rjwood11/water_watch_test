@@ -1,6 +1,5 @@
 # README
 
-A repository for a project to practice reproducible research practices while
-studying the state of drought around the world.
+A repository to test Water Watch system in Tennessee
 
-You can view the daily updates at https://riffomonas.org/drought_index/
+Code help: https://riffomonas.org/drought_index/
